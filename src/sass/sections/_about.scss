@@ -1,0 +1,15 @@
+.about__img-wr { 
+    position: relative;
+    width: 792px;
+}
+
+.about__img-wr::after{ 
+    content: "";
+    width: 722px;
+    height: 458px;
+    display: block;
+    position: absolute;
+    top:0; 
+    left:0; 
+    background-color: aquamarine;
+}
