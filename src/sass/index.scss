@@ -1,9 +1,10 @@
 @import "./base/common";
 @import "./base/reset"; 
 @import "./base/mixin";
+@import "./base/vars";
 
 @import "./components/container";
 
 
-@import "./sections/heder";
+@import "./sections/header";
 @import "./sections/about";
