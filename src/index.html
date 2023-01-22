@@ -12,7 +12,8 @@
   <body>
     <header class="header">
       <div class="container header__container">
-        <a href="#" class="logo header__logo link"><span class="logo__span">House</span>Residential complex</a>
+
+        <a href="#" class="logo link"><span class="logo__span logo__span--light-theme">House</span>Residential complex</a>
 
         <nav class="header__nav">
           <ul class="header__nav-list list">
@@ -32,56 +33,203 @@
           </div>
           <p class="theme-switch__color">Dark</p>
         </div>
-
-        <div class="mob-menu">
-          <!-- <button class="mob-menu__button-open">
-            <svg class="mob-menu__button-icon" width="18" height=""12>
-              <use href=""></use>
-            </svg>
-          </button> -->
-        </div>
-
+        <button class="mob-menu__button-open" data-menu-open>
+          <svg class="mob-menu__button-icon" width="18" height="12">
+            <use href="./images/sprite.svg#icon-burger"></use>
+          </svg>
+        </button>
       </div>
+
+
+          <div class="mob-menu is-hidden" data-menu>
+            <div class="container">
+              <button type="button" class="mob-menu__close-btn" data-menu-close>
+                <svg class="mob-menu__button-icon" width="20" height="20">
+                  <use href="./images/sprite.svg#icon-close"></use>
+                </svg>
+              </button>
+              <a href="#" class="logo logo--mob-menu link"><span class="logo__span logo__span--light-theme">House</span>Residential complex</a>
+              <nav class="mob-menu__nav">
+                <ul class="mob-menu__nav-list list">
+                  <li class="mob-menu__nav-item">
+                    <svg class="mob-menu__nav-icon" width="24" height="24">
+                      <use href="./images/sprite.svg#icon-info"></use>
+                    </svg>
+                    <a href="" class="mob-menu__nav-link link">About House</a>
+                  </li>
+                  <li class="mob-menu__nav-item">
+                    <svg class="mob-menu__nav-icon" width="24" height="24">
+                      <use href="./images/sprite.svg#icon-bild"></use>
+                    </svg>
+                    <a href="" class="mob-menu__nav-link link">Advantage</a>
+                  </li>
+                  <li class="mob-menu__nav-item">
+                    <svg class="mob-menu__nav-icon" width="24" height="24">
+                      <use href="./images/sprite.svg#icon-location"></use>
+                    </svg>
+                    <a href="" class="mob-menu__nav-link link">Location</a>
+                  </li>
+                  <li class="mob-menu__nav-item">
+                    <svg class="mob-menu__nav-icon" width="24" height="24">
+                      <use href="./images/sprite.svg#icon-select-multiple"></use>
+                    </svg>
+                    <a href="" class="mob-menu__nav-link link">Apartment layout</a>
+                  </li>
+                  <li class="mob-menu__nav-item">
+                    <svg class="mob-menu__nav-icon" width="24" height="24">
+                      <use href="./images/sprite.svg#icon-gallery-solid"></use>
+                    </svg>
+                    <a href="" class="mob-menu__nav-link link">Gallery</a>
+                  </li>
+                  <li class="mob-menu__nav-item">
+                    <svg class="mob-menu__nav-icon" width="24" height="24">
+                      <use href="./images/sprite.svg#icon-contact-phone"></use>
+                    </svg>
+                    <a href="" class="mob-menu__nav-link link">Contacts</a>
+                  </li>
+                  <li class="mob-menu__nav-item">
+                    <svg class="mob-menu__nav-icon" width="24" height="24">
+                      <use href="./images/sprite.svg#icon-language"></use>
+                    </svg>
+                    <a href="" class="mob-menu__nav-link link">Language</a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="mob-menu__address-wrapper">
+                <div class="mob-menu__works-hour-wrapper">
+                  <svg class="mob-menu__nav-icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-clock"></use>
+                  </svg>
+                  <p class="mob-menu__works-hour">Mon-Fri: 10:00-16:00 | Sat-Nd: Weekend</p>
+                </div>
+                <address class="mob-menu__address">
+                  <ul class="mob-menu__address-list list">
+                    <li class="mob-menu__address-item">
+                      <svg class="mob-menu__nav-icon" width="20" height="20">
+                        <use href="./images/sprite.svg#icon-location"></use>
+                      </svg>
+                      <a
+                        class="mob-menu__address-link link"
+                        href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"
+                        target="_blank"
+                        rel="noopener noreferrer nofollow"
+                        >Laurelton Queens, New York</a
+                      >
+                    </li>
+                    <li class="mob-menu__address-item">
+                      <svg class="mob-menu__nav-icon" width="20" height="20">
+                        <use href="./images/sprite.svg#icon_phone-call-fill"></use>
+                      </svg>
+                      <a class="mob-menu__address-link link" href="tel:+123456789">+1 234 56 789</a>
+                    </li>
+                  </ul>
+                </address>
+            </div>
+            <div class="mob-menu__theme-switch">
+              <p class="theme-switch__color">Light</p>
+              <div class="theme-switch__btn">
+                <input type="checkbox" id="theme-switch__tongle">
+                <label for="theme-switch__tongle"></label>
+              </div>
+              <p class="theme-switch__color">Dark</p>
+            </div>
+          </div>
+          </div>
+
     </header>
 
     <main> 
-      <section class="hero container">
-        <div class="hero__content">
-          <h1 class="hero__title title"><span class="hero__pre-title-span">House</span>Residential complex <span class="hero__after-title-span">bright space for a comfortable life</span></h1>
+      <section class="hero">
+        <div class="hero__content container">
+          <h1 class="hero__title title"><span class="hero__pre-title-span">House</span>Residential complex</h1>
+          <p class="hero__after-title">bright space for a comfortable life</p>
           <ul class="hero__advantages-list list">
-            <li class="hero__advantages-item">Apartments from 45 to 96 m²</li>
-            <li class="hero__advantages-item">Installment plan with a down payment of $700</li>
-            <li class="hero__advantages-item">87% of construction work completed</li>
+            <li class="hero__advantages-item">
+              <svg class="hero__advantages-icon" width="13" height="13">
+                <use href="./images/sprite.svg#icon-chek"></use>
+              </svg>
+              <p class="hero__advantages-text">Apartments from 45 to 96 m²</p> 
+            </li>
+            <li class="hero__advantages-item">
+              <svg class="hero__advantages-icon" width="13" height="13">
+                <use href="./images/sprite.svg#icon-chek"></use>
+              </svg>
+              <p class="hero__advantages-text">Installment plan with a down payment of $700</p>
+            </li>
+            <li class="hero__advantages-item">
+              <svg class="hero__advantages-icon" width="13" height="13">
+                <use href="./images/sprite.svg#icon-chek"></use>
+              </svg>
+              <p class="hero__advantages-text">87% of construction work completed</p>
+              </li>
           </ul>
 
           <div class="hero__button-wrapper">
-            <button class="hero__button button">Choose an apartment</button>
-            <button class="hero__button button">Find out the cost</button>
+            <button class="hero__button button button--light-theme">Choose an apartment</button>
+            <button class="hero__button button button--transparent">Find out the cost</button>
+          </div>
+
+          <div class="hero__address-wrapper">
+            <address class="hero__address">
+              <ul class="hero__address-list list">
+                <li class="hero__address-item">
+                  <svg class="hero__address-icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-clock"></use>
+                  </svg>
+                  <p class="hero__works-hour">Mon-Fri: 10:00-16:00 | Sat-Nd: Weekend</p>
+                </li>
+                <li class="hero__address-item">
+                  <svg class="hero__address-icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon_phone-call-fill"></use>
+                  </svg>
+                  <a class="hero__address-link link" href="tel:+123456789">+1 234 56 789</a>
+                </li>
+                <li class="hero__address-item">
+                  <svg class="hero__address-icon" width="20" height="20">
+                    <use href="./images/sprite.svg#icon-location"></use>
+                  </svg>
+                  <a
+                    class="hero__address-link link"
+                    href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    >Laurelton Queens, New York</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="hero__soc animate__animated animate__fadeInUp">
+            <ul class="hero__soc-list list ">
+              <li class="hero__soc-item">
+                <a href="" class="hero__soc-link link">
+                  <svg class="hero__soc-icon" width="40" height="40">
+                    <use href="./images/sprite.svg#icon-instagram-logo-fill"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="hero__soc-item">
+                <a href="" class="hero__soc-link link">
+                  <svg class="hero__soc-icon" width="40" height="40">
+                    <use href="./images/sprite.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="hero__soc-item">
+                <a href="" class="hero__soc-link link">
+                  <svg class="hero__soc-icon" width="40" height="40">
+                    <use href="./images/sprite.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 
-        <div class="hero__address-wrapper">
-          <p class="hero__works-hour">Mon-Fri: 10:00-16:00 | Sat-Nd: Weekend</p>
-          <address class="hero__address">
-            <ul class="hero__address-list list">
-              <li class="hero__address-item">
-                <a class="hero__address-link link" href="tel:+123456789">+1 234 56 789</a>
-              </li>
-              <li class="hero__address-item">
-                <a
-                  class="hero__address-link link"
-                  href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  >Laurelton Queens, New York</a
-                >
-              </li>
-            </ul>
-          </address>
-        </div>
+
       </section>
 
-      <section class="about container">
+      <!-- <section class="about container">
          <h2 class="title">
            About 
           <span class="title__span">House</span>
@@ -107,9 +255,9 @@
          </div>
            </div>
 
-      </section>
+      </section> -->
 
-      <section class="advantage container">
+      <!-- <section class="advantage container">
         <div class="text-content">
           <h3 class="section-title">Advantage</h3>
           <ul class="advantage__list list">
@@ -137,9 +285,9 @@
         </div>
         
         <img src="#" alt="house">
-      </section>
+      </section> -->
 
-      <section class="location container">
+      <!-- <section class="location container">
         <div class="text-content">
           <h3 class="section-title">Location</h3>
           <p class="location__after-title">
@@ -182,9 +330,9 @@
         </div>
 
         <img src="#" alt="house">
-      </section>
+      </section> -->
 
-      <section class="apartments container">
+      <!-- <section class="apartments container">
         <h3 class="apartments__title">Apartment layout</h3>
         <p class="apartments__after-title">Let's find your dream apartment</p>
         <ul class="apartments__number-list list">
@@ -228,11 +376,13 @@
             </svg>
           </li>
         </ul>
-      </section>
+      </section> -->
     </main>
   
     <footer>
 
     </footer>
+
+    <script type="module" src="./index.js"></script>
   </body>
 </html>

@@ -1,9 +1,12 @@
 :root {
     --black-text-color: #000000;
     --white-text-color: #FFFBF8;
-    --title-text-color: #2E2E2E;
+    --dark-text-color: #2E2E2E;
     --light-accent-color: #00A3FF;
-    --dark-accent-color: #FFC700;;
+    --light-accent-hover-color: #0B78B6; 
+    --dark-accent-color: #FFC700;
+
+    --text-shadow: 1px 1px 4px #151719;
   
     --lightBGL: #FDFEFF;
     --darkBG: #4A4A4A;;;
@@ -12,5 +15,9 @@
   
     --cubic: cubic-bezier(0.4, 0, 0.2, 1);
     --duration: 250ms;
+
+    --gradient-hero-mob: linear-gradient(23.82deg, rgba(2, 26, 47, 0.5) 56.92%, rgba(0, 55, 102, 0) 145.73%); 
+    --gradient-hero-tab: linear-gradient(72.44deg, rgba(0, 31, 49, 0.63) 56.63%, rgba(255, 255, 255, 0) 100%);
+    --gradient-hero-pc: linear-gradient(72.44deg, rgba(0, 31, 49, 0.57) 56.63%, rgba(255, 255, 255, 0) 100%);
   }
   

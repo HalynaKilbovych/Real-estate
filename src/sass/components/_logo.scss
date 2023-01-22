@@ -1,0 +1,46 @@
+.logo { 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    text-transform: uppercase;
+    color: var(--white-text-color);
+    @include font ($fw: 500, $fs: 10, $lh: 15);
+    letter-spacing: 0.035em;
+    @include tablet { 
+        flex-direction: column;
+        gap: 2px;
+        align-items: flex-start;
+        @include font ($fw: 500, $fs: 12, $lh: 21);
+    }
+    @include desktop { 
+        @include font ($fw: 500, $fs: 14, $lh: 24);
+    }
+}
+.logo__span {
+    @include font ($fw: 700, $fs: 17, $lh: 26);
+    letter-spacing: 0.035em;
+    @include tablet { 
+        @include font ($fw: 700, $fs: 40, $lh: 40);
+    }
+    @include desktop { 
+        @include font ($fw: 700, $fs: 48, $lh: 45);
+    }
+}
+.logo--mob-menu { 
+    flex-direction: column; 
+    gap: 2px;
+}
+.logo__span--light-theme {
+    color: var(--light-accent-color); 
+}
+.logo__span--dark-theme {
+    color: var(--dark-accent-color); 
+}
+
+.logo--mob-menu { 
+    align-items: center;
+}
+
+
+

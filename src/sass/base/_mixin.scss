@@ -17,7 +17,7 @@
 }
 
 @mixin desktop {
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1600px) {
     @content;
   }
 }
@@ -30,16 +30,20 @@
   }
 }
 
-// @include font ($fw: 400, $fs: 14, $lh: 26, $ls: 0.02);
 @mixin font($fw: 400, $fs: 14, $lh: 26, $ls: 0.02) {
   font-weight: $fw;
   font-size: $fs + px;
   line-height: calc($lh / $fs);
-  letter-spacing: $ls + em;
 }
 
 @mixin flex {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@mixin bg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; 
 }

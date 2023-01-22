@@ -1,0 +1,186 @@
+.hero {
+padding-top: 170px;
+padding-bottom: 50px;
+background: var(--gradient-hero-mob), url('../images/hero-bg-mob.jpg');
+  @include bg;
+  @include retina {
+    background: var(--gradient-hero-mob), url('../images/hero-bg-mob-2x.jpg');
+  }
+
+  @include tablet {
+    background: var(--gradient-hero-tab), url('../images/hero-bg-tab-2x.jpg');
+    @include bg;
+    padding-top: 220px;
+    padding-bottom: 140px;
+    @include retina {
+      background: var(--gradient-hero-tab), url('../images/hero-bg-tab-2x.jpg');
+    }
+  }
+  @include desktop {
+    background: var(--gradient-hero-pc), url('../images/hero-bg-2x.jpg');
+    @include bg;
+
+    @include retina {
+      background: var(--gradient-hero-pc), url('../images/hero-bg-2x.jpg');
+    }
+    }
+&__title {
+    @include font ($fw: 700, $fs: 24, $lh: 36);
+    text-shadow: var(--text-shadow);
+    color: var(--white-text-color);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    @include tablet { 
+        @include font ($fw: 700, $fs: 27, $lh: 35);
+        margin-bottom: 0;
+        flex-direction: row; 
+        align-items: center;
+    }
+    @include tablet { 
+        @include font ($fw: 700, $fs: 40, $lh: 40);
+    }
+}
+&__pre-title-span {
+    @include font ($fw: 700, $fs: 48, $lh: 30);
+    text-transform: uppercase;
+    color: var(--light-accent-color);
+    text-shadow: var(--text-shadow);
+    @include tablet { 
+        @include font ($fw: 700, $fs: 50, $lh: 60);
+    }
+    @include desktop { 
+        @include font ($fw: 700, $fs: 60, $lh: 80);
+    }
+}
+&__after-title{
+    @include font ($fw: 700, $fs: 30, $lh: 39);
+    color: var(--white-text-color);
+    text-shadow: var(--text-shadow);
+    @include tablet { 
+        @include font ($fw: 700, $fs: 30, $lh: 39);
+        letter-spacing: 0.085em;
+    }
+}
+&__advantages-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    @include tablet { 
+        margin-top: 50px;
+    }
+}
+&__advantages-item {
+    display: flex;
+    align-items: baseline;
+    gap: 7px;
+    &:hover .hero__advantages-icon{ 
+        fill: var(--light-accent-hover-color);
+    }
+    @include tablet { 
+        gap: 15px;
+    }
+}
+&__advantages-text { 
+    @include font ($fw: 500, $fs: 14, $lh: 21);
+    color: var(--white-text-color);
+    text-shadow: var(--text-shadow);
+    @include tablet { 
+        @include font ($fw: 500, $fs: 24, $lh: 36);
+    }
+}
+&__advantages-icon { 
+    fill: var(--light-accent-color);
+    transition: fill var(--duration) var(--cubic);
+}
+}
+
+.hero__button-wrapper {
+    margin-top: 42px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    @include tablet { 
+        flex-direction: row;
+        margin-top: 70px;
+        gap: 27px;
+    }
+    @include desktop { 
+        gap: 35px;
+    }
+}
+.hero__button {
+    width: 280px;
+}
+.button {
+}
+.hero__address-wrapper {
+    display: flex;
+    justify-content: end;
+    margin-top: 150px;
+}
+.hero__works-hour {
+    @include font ($fw: 500, $fs: 14, $lh: 30);
+    color: var(--white-text-color);
+}
+.hero__address {
+}
+.hero__address-list {
+    display: none;
+    @include desktop { 
+        display: flex;
+        gap: 22px;
+    }
+}
+.hero__address-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    &:hover > .hero__address-icon,
+    &:focus > .hero__address-icon { 
+        fill: var(--light-accent-hover-color);
+    }
+}
+.hero__address-link {
+    @include font ($fw: 500, $fs: 14, $lh: 30);
+    color: var(--white-text-color);
+    cursor: pointer;
+
+}
+.hero__address-icon { 
+    fill: var(--light-accent-color);
+    transition: fill var(--duration) var(--cubic);
+}
+.hero__soc {
+    @include flex; 
+    animation-delay: 0.9s;
+}
+.hero__soc::after,
+.hero__soc::before  { 
+    content: " ";
+    display: block;
+    width: 50%;
+    height: 2px;
+    background-color: var(--light-accent-color);
+}
+.hero__soc-list {
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.hero__soc-item {
+}
+.hero__soc-link {
+    &:hover > .hero__soc-icon,
+    &:focus > .hero__soc-icon { 
+        fill: var(--light-accent-hover-color);
+    }
+}
+
+.hero__soc-icon {
+    fill: var(--light-accent-color);
+}

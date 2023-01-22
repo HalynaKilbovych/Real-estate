@@ -1,0 +1,31 @@
+.button { 
+    @include font ($fw: 600, $fs: 14, $lh: 21, $ls: 0.02);
+    padding-top: 13px;
+    padding-bottom: 13px;
+    color: var(--white-text-color);
+}
+
+.button--light-theme { 
+    background-color: var(--light-accent-color);
+    border: transparent;
+    transition: all var(--duration) var(--cubic);
+    &:hover, 
+    &:focus { 
+        background-color: var(--light-accent-hover-color);
+    }
+}
+.button--dark-theme { 
+    background-color: var(--dark-accent-color);
+    
+}
+.button--transparent { 
+    border: 2px solid var(--white-text-color); 
+    background-color: rgba(255, 251, 248, 0.1);
+    box-shadow: 1px 3px 7px #151719;
+    transition: all var(--duration) var(--cubic);
+    &:hover, 
+    &:focus { 
+        background-color: var(--white-text-color);
+        color: var(--dark-text-color);
+    }
+}

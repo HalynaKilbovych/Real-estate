@@ -1,46 +1,182 @@
 .header {
+    position: fixed;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
     background-color: rgba(0, 0, 0, 0.6);
     box-shadow: 0px 1px 7px rgba(20, 22, 24, 0.5);
-
+    @include desktop { 
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    &__nav { 
+        @include tablet { 
+            margin-left: 70px;
+        }
+    }
     &__container { 
     display: flex;
-    } 
-}
-.header
-
-.logo {
-    // display: flex;
-    // gap:40px; 
-}
-.header__logo {
-    display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 40px;
-    @include font ($fw: 500, $fs: 10, $lh: 15, $ls: 0.02);
-    text-transform: capitalize;
+    } 
+    &__nav-list {
+        display: none;
+        @include tablet { 
+            display: flex;
+            gap: 30px;
+        }
+        @include desktop{ 
+            gap: 40px;
+        }
+    }
+    &__nav-item:nth-child(n + 4) { 
+        display: none; 
+        @include desktop { 
+            display: block;
+        }
+    }
+    &__nav-link {
+    @include font ($fw: 500, $fs: 16, $lh: 20);
     color: var(--white-text-color);
+    transition: color var(--duration) var(--cubic);
+    &:hover, 
+    &:focus { 
+        color: var(--light-accent-color);
+    }
+    @include desktop { 
+        @include font ($fw: 500, $fs: 20, $lh: 30);
+    }
+    }
 }
-.logo__span {
-    @include font ($fw: 700, $fs: 17, $lh: 26, $ls: 0.02);
-    color: var(--light-accent-color); 
-}
-.header__nav {
-    display: none;
-}
-.header__nav-list {
-}
-.list {
-}
-.header__nav-item {
-}
-.header__nav-link {
-}
-.link {
-}
+
 .theme-switch {
     display: none;
+    @include desktop { 
+        position: absolute;
+        top: 20px;
+        right: 0;
+        display: flex;
+        gap: 10px;
+    }
+
 }
 .theme-switch__color {
+    @include font ($fw: 300, $fs: 14, $lh: 21);
+    color: var(--white-text-color);
 }
 .theme-switch__btn {
+}
+
+
+.mob-menu {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url(../images/mob-menu-bg.png), rgba(0, 0, 0, 0.9);
+    > .container {
+    height: 100%;
+    }
+    &__button-open, 
+    &__close-btn { 
+        display: block;
+        background: transparent; 
+        border: none;
+        cursor: pointer;
+        @include desktop { 
+            display: none;
+        }
+    }
+    &__close-btn { 
+        margin-left: auto;
+        margin-top: 10px;
+    }
+    &__button-icon { 
+        display: block;
+        width: 18px;
+        height: 12px;
+        fill: var(--light-accent-color);
+        transition: fill var(--duration) var(--cubic);
+        &:hover, 
+        &:focus { 
+            fill: var(--light-accent-hover-color);
+       } 
+       @include tablet { 
+        width: 24px;
+        height: 20px;
+       }
+       @include desktop { 
+        display: none;
+       }
+    }
+   
+    &__nav {
+        margin-top: 34px;
+    
+    }
+    &__nav-list {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    &__nav-item {
+        background: rgba(19, 19, 19, 0.5);
+        display: flex;
+        align-items: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 50px;
+        gap: 15px;
+    }
+    &__nav-item:nth-child(-n + 3){ 
+        @include tablet { 
+            display: none;
+        }
+    }
+    &__nav-icon {
+        fill: var(--light-accent-color);
+        transition: fill var(--duration) var(--cubic);
+        &:hover, 
+        &:focus { 
+        fill: var(--light-accent-hover-color);
+        }
+    }
+    &__nav-link {
+        @include font ($fw: 500, $fs: 16, $lh: 24);
+        color: var(--white-text-color);
+    }
+    &__address-wrapper {
+        margin-top: 30px;
+        background: rgba(19, 19, 19, 0.5);
+        padding: 30px;
+    }
+    &__works-hour-wrapper { 
+        display: flex;
+        gap: 5px;
+    }
+    &__works-hour {
+        @include font ($fw: 500, $fs: 14, $lh: 21);
+        color: var(--white-text-color);
+    }
+    &__address-list {
+        margin-top: 13px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 13px;
+    }
+    &__address-link {
+        @include font ($fw: 500, $fs: 14, $lh: 21);
+        color: var(--white-text-color);
+    }
+    &__theme-switch { 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+    }
+    
 }
