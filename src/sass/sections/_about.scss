@@ -1,15 +1,43 @@
-.about__img-wr { 
-    position: relative;
-    width: 792px;
-}
-
-.about__img-wr::after{ 
-    content: "";
-    width: 722px;
-    height: 458px;
-    display: block;
-    position: absolute;
-    top:0; 
-    left:0; 
-    background-color: aquamarine;
+.about { 
+    &__title { 
+        margin-top: 45px;
+        @include desktop { 
+            margin-top: 75px;
+        }
+    }
+    &__content { 
+        @include flex; 
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        @include tablet { 
+            flex-direction: row;
+            margin-top: 42px;
+        }
+        @include desktop { 
+            margin-top: 70px;
+        }
+        
+    }
+    &__section-title { 
+        margin-bottom: 30px;
+    }
+    &__text-content { 
+        max-width: 100%;
+        @include tablet { 
+            max-width: 47%;
+        }
+        @include desktop { 
+            max-width: 40%;
+        }
+    }
+    &__img { 
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    &__text { 
+        @include font ($fw: 500, $fs: 14, $lh: 21);
+        @include desktop { 
+            @include font ($fw: 500, $fs: 18, $lh: 32);
+        }
+    }
 }

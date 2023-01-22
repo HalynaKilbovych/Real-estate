@@ -141,7 +141,7 @@
     <main> 
       <section class="hero">
         <div class="hero__content container">
-          <h1 class="hero__title title"><span class="hero__pre-title-span">House</span>Residential complex</h1>
+          <h1 class="hero__title"><span class="hero__pre-title-span">House</span>Residential complex</h1>
           <p class="hero__after-title">bright space for a comfortable life</p>
           <ul class="hero__advantages-list list">
             <li class="hero__advantages-item">
@@ -225,69 +225,112 @@
             </ul>
           </div>
         </div>
-
-
       </section>
 
-      <!-- <section class="about container">
-         <h2 class="title">
-           About 
-          <span class="title__span">House</span>
-          <span class="title__after-span">Residential complex</span>
-         </h2>
+      <section class="about container">
+        <div class="title-wrapper about__title">
+          <div class="title__line"></div>
+          <div class="title-wr">
+              <h2 class="title">
+              About 
+              <span class="title__span">House</span>
+              <span class="title__after-span">Residential complex</span>
+            </h2>
+          </div>
+        <div class="title__line"></div>
+        </div>
+        
 
          <div class="about__content">
-           <div class="text-content">
-            <h3 class="section-title">The best house for living</h3>
-            <p class="about-text">The new building consists of 12 residential and one commercial floor. Everything in the house is thought out to the smallest detail, from the built-in AKVANTIS water purification system to the evening illumination of the facades.
+           <div class="about__text-content">
+            <h3 class="section-title about__section-title">The best house for living</h3>
+            <p class="about__text">The new building consists of 12 residential and one commercial floor. Everything in the house is thought out to the smallest detail, from the built-in AKVANTIS water purification system to the evening illumination of the facades.
             </p>
-            <p class="about-text">On the ground floor there is a shop, a pharmacy, a coffee shop.
+            <p class="about__text">On the ground floor there is a shop, a pharmacy, a coffee shop.
               and other service companies. Therefore, the solution of everyday issues will take less time, and you can devote it to more pleasant things. And the closed territory of the complex will give you the opportunity to feel confident.</p>
            </div>
 
-           <div class="about__img-wr">
-            <img
-            class="about__img"
-              src="./images/about-1.jpg"
-              alt="house"
-              width="792"
-              height="528">
-         </div>
+           <div class="img-wr about__img">
+            <picture>
+              <source srcset="
+              ./images/about-1-mob.jpg 1x,
+              ./images/about-1-mob-2x.jpg 2x"
+              media="(max-width: 767px)">
+              <source srcset="
+              ./images/about-1-tab.jpg 1x,
+              ./images/about-1-tab-2x.jpg 2x"
+              media="(max-width: 1199px)">
+              <source srcset="
+              ./images/about-1.jpg 1x,
+              ./images/about-1-2x.jpg 2x"
+              media="(min-width: 1200px)">
+              <img
+              class="img"
+                src="./images/about-1-mob.jpg"
+                alt="house"
+                width="792"
+                height="528">
+            </picture>
+          </div>
            </div>
 
-      </section> -->
+      </section>
 
-      <!-- <section class="advantage container">
-        <div class="text-content">
-          <h3 class="section-title">Advantage</h3>
-          <ul class="advantage__list list">
-            <li class="advantage__item">
-              <p class="advantage__title">Modern living space</p>
-              <p class="advantage__text">The area is designed taking into account the latest loft style trends</p>
-            </li>
-            <li class="advantage__item">
-              <p class="advantage__title">Inovative technologies</p>
-              <p class="advantage__text"><span>House </span>can boast of the best architectural solutions, modern energy-saving technologies and detailed planning of apartments</p>
-            </li>
-            <li class="advantage__item">
-              <p class="advantage__title">High level of security</p>
-              <p class="advantage__text">Residential area with an implemented access control system, video surveillance and 24-hour security service.</p>
-            </li>
-            <li class="advantage__item">
-              <p class="advantage__title">The yard is free from cars</p>
-              <p class="advantage__text">Thanks to underground parking, the problem with the number of cars in your yard will be solved.</p>
-            </li>
-            <li class="advantage__item">
-              <p class="advantage__title">Sports and health</p>
-              <p class="advantage__text">The presence of a multifunctional sports ground, a modern children's playground, a sports club and high-quality bicycle construction.</p>
-            </li>
-          </ul>
+      <section class="advantage container">
+        <div class="advantage__content">
+          <div class="advantage__text-content">
+            <h3 class="section-title">Advantage</h3>
+            <ul class="advantage__list list">
+              <li class="advantage__item">
+                <p class="advantage__title">Modern living space</p>
+                <p class="advantage__text">The area is designed taking into account the latest loft style trends</p>
+              </li>
+              <li class="advantage__item">
+                <p class="advantage__title">Inovative technologies</p>
+                <p class="advantage__text"><span>House </span>can boast of the best architectural solutions, modern energy-saving technologies and detailed planning of apartments</p>
+              </li>
+              <li class="advantage__item">
+                <p class="advantage__title">High level of security</p>
+                <p class="advantage__text">Residential area with an implemented access control system, video surveillance and 24-hour security service.</p>
+              </li>
+              <li class="advantage__item">
+                <p class="advantage__title">The yard is free from cars</p>
+                <p class="advantage__text">Thanks to underground parking, the problem with the number of cars in your yard will be solved.</p>
+              </li>
+              <li class="advantage__item">
+                <p class="advantage__title">Sports and health</p>
+                <p class="advantage__text">The presence of a multifunctional sports ground, a modern children's playground, a sports club and high-quality bicycle construction.</p>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="img-wr advantage__img">
+            <picture>
+              <source srcset="
+              ./images/about-2-mob.jpg 1x,
+              ./images/about-2-mob-2x.jpg 2x"
+              media="(max-width: 767px)">
+              <source srcset="
+              ./images/about-2-tab.jpg 1x,
+              ./images/about-2-tab-2x.jpg 2x"
+              media="(max-width: 1199px)">
+              <source srcset="
+              ./images/about-2.jpg 1x,
+              ./images/about-2-2x.jpg 2x"
+              media="(min-width: 1200px)">
+              <img
+              class="img"
+                src="./images/about-2-mob.jpg"
+                alt="house"
+                width="792"
+                height="528">
+            </picture>
+          </div>
         </div>
-        
-        <img src="#" alt="house">
-      </section> -->
 
-      <!-- <section class="location container">
+      </section>
+
+      <section class="location container">
         <div class="text-content">
           <h3 class="section-title">Location</h3>
           <p class="location__after-title">
@@ -329,8 +372,29 @@
           <p class="location__text"></p>
         </div>
 
-        <img src="#" alt="house">
-      </section> -->
+        <div class="img-wr advantage__img">
+          <picture>
+            <source srcset="
+            ./images/about-3-mob.jpg 1x,
+            ./images/about-3-mob-2x.jpg 2x"
+            media="(max-width: 767px)">
+            <source srcset="
+            ./images/about-3-tab.jpg 1x,
+            ./images/about-3-tab-2x.jpg 2x"
+            media="(max-width: 1199px)">
+            <source srcset="
+            ./images/about-3.jpg 1x,
+            ./images/about-3-2x.jpg 2x"
+            media="(min-width: 1200px)">
+            <img
+            class="img"
+              src="./images/about-3-mob.jpg"
+              alt="house"
+              width="792"
+              height="528">
+          </picture>
+        </div>
+      </section>
 
       <!-- <section class="apartments container">
         <h3 class="apartments__title">Apartment layout</h3>

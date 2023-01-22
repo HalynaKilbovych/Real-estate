@@ -1,0 +1,50 @@
+.img-wr { 
+    position: relative;
+    width: 226px;
+    @include tablet { 
+        width: 331px;
+    }
+    @include desktop { 
+        width: 792px; 
+    }
+}
+.img-wr::after { 
+    content: "";
+    width: 206px;
+    height: 131px;
+    display: block;
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    z-index: -1;
+    background-color: var(--light-accent-color); 
+    @include tablet { 
+        width: 301px;
+        height: 192px;
+    }
+    @include desktop { 
+        width: 722px;
+        height: 458px;
+    }
+}
+.img-wr::before{ 
+    content: "";
+    width: 206px;
+    height: 131px;
+    display: block;
+    position: absolute;
+    bottom: 20%;
+    right: 15%;
+    z-index: -1;
+    background-color: transparent;
+    border: 2px solid var(--light-accent-color);
+    @include tablet { 
+        width: 301px;
+        height: 192px;
+    }
+    @include desktop { 
+        width: 722px;
+        height: 458px;
+    }
+
+}
