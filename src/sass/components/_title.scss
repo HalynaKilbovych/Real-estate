@@ -1,90 +1,87 @@
-.title {
-    @include font ($fw: 500, $fs: 17, $lh: 17);
-    color: var(--dark-text-color);
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
-    max-width: 150px;
-    margin-left: 10px;
-    margin-right: 10px;
-    @include tablet { 
-        @include font ($fw: 500, $fs: 30, $lh: 30);
-        max-width: 250px;
-        gap: 3px;
-    }
-    @include desktop { 
-        @include font ($fw: 500, $fs: 36, $lh: 36); 
-        max-width: 290px;
-    }
-}
-.title-wrapper { 
+.title { 
     display: flex;
     align-items: center;
     justify-content: center;
+    &__line { 
+        width: calc((100% - 220px)/2); 
+        height: 2px;
+        background-color: var(--light-accent-color);
+        @include tablet { 
+            width: calc((100% - 400px)/2); 
+        }
+        @include desktop { 
+            width: calc((100% - 580px)/2); 
+        }
+    }
+    &__wr { 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // margin: auto;
+        padding: 0px 10px;
+        &::after,
+        &::before { 
+            content: "";
+            display: block;
+            width: 19px;
+            height: 3px;
+            background-image: url(../images/title-dots-mob.svg);
+            @include tablet { 
+                background-image: url(../images/title-dots-tab.svg);
+                width: 100px;
+                height: 10px;
+            }
+            @include desktop { 
+                background-image: url(../images/title-dots-pc.svg);
+                width: 190px;
+                height: 10px;
+            }
+        }
+    }
+    &__text {
+        @include font ($fw: 500, $fs: 17, $lh: 17);
+        color: var(--dark-text-color);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        max-width: 150px;
+        margin-left: 10px;
+        margin-right: 10px;
+        @include tablet { 
+            @include font ($fw: 500, $fs: 30, $lh: 30);
+            max-width: 250px;
+            gap: 3px;
+        }
+        @include desktop { 
+            @include font ($fw: 500, $fs: 36, $lh: 36); 
+            max-width: 290px;
+        }
+    }
+    &__span {
+        @include font ($fw: 900, $fs: 17, $lh: 17); 
+        color: var(--light-accent-color);
+        text-transform: uppercase;
+        @include tablet { 
+            @include font ($fw: 900, $fs: 30, $lh: 30);
+        }
+        @include desktop { 
+            @include font ($fw: 900, $fs: 36, $lh: 36); 
+        }
+    }
+    &__after-span {
+        @include font ($fw: 500, $fs: 10, $lh: 15); 
+        text-transform: capitalize;
+        color: var(--dark-text-color);
+        @include tablet { 
+            @include font ($fw: 500, $fs: 14, $lh: 21);
+            letter-spacing: 0.315em;
+        }
+        @include desktop { 
+            @include font ($fw: 500, $fs: 16, $lh: 24); 
+        }
+    }
 }
-.title__line { 
-    width: 20px;
-    height: 2px;
-    background-color: var(--light-accent-color);
-    @include mobile { 
-        width: 70px;
-    }
-    @include tablet { 
-        width: 100px;
-    }
-    @include desktop { 
-        width: 420px;
-    }
-}
-.title-wr { 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-}
-.title-wr::after, 
-.title-wr::before { 
-    content: "";
-    display: block;
-    width: 19px;
-    height: 3px;
-    background-image: url(../images/title-dots-mob.svg);
-    @include tablet { 
-        background-image: url(../images/title-dots-tab.svg);
-        width: 100px;
-        height: 10px;
-    }
-    @include desktop { 
-        background-image: url(../images/title-dots-pc.svg);
-        width: 190px;
-        height: 10px;
-    }
-}
-.title__span {
-    @include font ($fw: 900, $fs: 17, $lh: 17); 
-    color: var(--light-accent-color);
-    text-transform: uppercase;
-    @include tablet { 
-        @include font ($fw: 900, $fs: 30, $lh: 30);
-    }
-    @include desktop { 
-        @include font ($fw: 900, $fs: 36, $lh: 36); 
-    }
-}
-.title__after-span {
-    @include font ($fw: 500, $fs: 10, $lh: 15); 
-    text-transform: capitalize;
-    color: var(--dark-text-color);
-    @include tablet { 
-        @include font ($fw: 500, $fs: 14, $lh: 21);
-        letter-spacing: 0.315em;
-    }
-    @include desktop { 
-        @include font ($fw: 500, $fs: 16, $lh: 24); 
-    }
-}
-
 
 .section-title { 
     @include font ($fw: 700, $fs: 17, $lh: 21); 
@@ -97,13 +94,22 @@
     @include desktop { 
         @include font ($fw: 700, $fs: 36, $lh: 54); 
     }
-}
-
-.section-title::after { 
-    content: "";
-    display: block;
-    width: 300px;
-    height: 2px;
-    margin-left: auto;
-    background-color: var(--light-accent-color);
+    &__line { 
+        width: 190px;
+        height: 2px;
+        background-color: var(--light-accent-color);
+        @include tablet { 
+            width: 270px;
+        }
+        @include desktop { 
+            width: 370px;
+        }
+        &--about { 
+            margin-bottom: 30px;
+            margin-left: 50px;
+            @include tablet { 
+                margin-left: auto;
+            }
+        }
+    }
 }

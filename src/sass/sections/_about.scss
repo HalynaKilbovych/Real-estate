@@ -19,7 +19,7 @@
         
     }
     &__section-title { 
-        margin-bottom: 30px;
+        // margin-bottom: 30px;
     }
     &__text-content { 
         max-width: 100%;
@@ -40,4 +40,8 @@
             @include font ($fw: 500, $fs: 18, $lh: 32);
         }
     }
+}
+
+.section-title__line--about { 
+    
 }
