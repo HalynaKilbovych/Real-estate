@@ -3,7 +3,7 @@
     align-items: center;
     justify-content: center;
     &__line { 
-        width: calc((100% - 220px)/2); 
+        width: calc((100% - 240px)/2); 
         height: 2px;
         background-color: var(--light-accent-color);
         @include tablet { 
