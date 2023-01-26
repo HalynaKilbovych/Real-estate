@@ -2,7 +2,7 @@
   padding-top: 45px;
   padding-bottom: 55px;
   @include tablet {
-    padding-top: 75px;
+    padding-top: 130px;
     padding-bottom: 130px;
   }
 
@@ -10,51 +10,69 @@
     @include flex;
     flex-direction: column-reverse;
     justify-content: space-between;
-    @include tablet {
-      flex-direction: row;
-      margin-top: 42px;
-    }
     @include desktop {
-      margin-top: 70px;
+      flex-direction: row-reverse;
     }
+  }
+  &__text-content {
+    max-width: 650px;
   }
   &__section-title {
     @include desktop {
-      // text-align: right;
+      text-align: left;
     }
   }
-}
-
-.advantage__list {
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
-}
-.advantage__item {
-  position: relative;
-}
-.advantage__item::before {
-  content: '';
-  width: 0px;
-  height: 26px;
-  border: 2px solid var(--light-accent-color);
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-.advantage__title {
-  @include font($fw: 700, $fs: 17, $lh: 21);
-  // color: var(--dark-text-color);
-}
-.advantage__text {
-  @include font($fw: 500, $fs: 14, $lh: 20);
-  // color: var(--dark-text-color);
-}
-
-.advantage__img {
-  margin-bottom: 40px;
-}
-.img {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    @include tablet {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    @include desktop {
+      flex-wrap: nowrap;
+      flex-direction: column;
+    }
+  }
+  &__item {
+    position: relative;
+    padding-left: 15px;
+    @include tablet {
+      width: 250px;
+    }
+    @include desktop {
+      width: auto;
+    }
+    &::before {
+      content: '';
+      width: 0px;
+      height: 26px;
+      border: 2px solid var(--light-accent-color);
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+  }
+  &__title {
+    @include font($fw: 700, $fs: 17, $lh: 21);
+    // color: var(--dark-text-color);
+    margin-bottom: 7px;
+    @include desktop {
+      @include font($fw: 700, $fs: 24, $lh: 16);
+      margin-bottom: 15px;
+    }
+  }
+  &__text {
+    @include font($fw: 500, $fs: 14, $lh: 20);
+    // color: var(--dark-text-color);
+    @include desktop {
+      @include font($fw: 500, $fs: 16, $lh: 22);
+    }
+  }
+  &__img {
+    margin-bottom: 40px;
+  }
 }

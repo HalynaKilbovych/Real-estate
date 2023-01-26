@@ -131,6 +131,7 @@
   @include desktop {
     @include font($fw: 700, $fs: 36, $lh: 54);
   }
+
   &__line {
     width: 190px;
     height: 2px;
@@ -146,6 +147,9 @@
     }
     &--advantage {
       margin-right: auto;
+      @include tablet {
+        margin-left: auto;
+      }
     }
   }
 
