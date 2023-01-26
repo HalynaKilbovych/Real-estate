@@ -1,2 +1,19 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
-@import "~/node_modules/animate.css/animate.css";
+@import '~/node_modules/animate.css/animate.css';
+
+body {
+  transition: color var(--duration) var(--cubic),
+    background-color var(--duration) var(--cubic);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+}
+
+html.light body {
+  background-color: var(--lightBGL);
+  color: var(--dark-text-color);
+}
+
+html.dark body {
+  background-color: var(--darkBG);
+  color: var(--white-text-color);
+}
