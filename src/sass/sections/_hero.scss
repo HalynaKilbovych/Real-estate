@@ -1,7 +1,7 @@
 .hero {
-padding-top: 170px;
-padding-bottom: 50px;
-background: var(--gradient-hero-mob), url('../images/hero-bg-mob.jpg');
+  padding-top: 170px;
+  padding-bottom: 50px;
+  background: var(--gradient-hero-mob), url('../images/hero-bg-mob.jpg');
   @include bg;
   @include retina {
     background: var(--gradient-hero-mob), url('../images/hero-bg-mob-2x.jpg');
@@ -23,164 +23,232 @@ background: var(--gradient-hero-mob), url('../images/hero-bg-mob.jpg');
     @include retina {
       background: var(--gradient-hero-pc), url('../images/hero-bg-2x.jpg');
     }
-    }
-&__title {
-    @include font ($fw: 700, $fs: 24, $lh: 36);
+  }
+  &__title {
+    @include font($fw: 700, $fs: 24, $lh: 36);
     text-shadow: var(--text-shadow);
     color: var(--white-text-color);
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin-bottom: 20px;
-    @include tablet { 
-        @include font ($fw: 700, $fs: 27, $lh: 35);
-        margin-bottom: 0;
-        flex-direction: row; 
-        align-items: center;
+    @include tablet {
+      @include font($fw: 700, $fs: 27, $lh: 35);
+      margin-bottom: 0;
+      flex-direction: row;
+      align-items: center;
     }
-    @include tablet { 
-        @include font ($fw: 700, $fs: 40, $lh: 40);
+    @include tablet {
+      @include font($fw: 700, $fs: 40, $lh: 40);
     }
-}
-&__pre-title-span {
-    @include font ($fw: 700, $fs: 48, $lh: 30);
+  }
+  &__pre-title-span {
+    @include font($fw: 700, $fs: 48, $lh: 30);
     text-transform: uppercase;
-    color: var(--light-accent-color);
     text-shadow: var(--text-shadow);
-    @include tablet { 
-        @include font ($fw: 700, $fs: 50, $lh: 60);
+    @include tablet {
+      @include font($fw: 700, $fs: 50, $lh: 60);
     }
-    @include desktop { 
-        @include font ($fw: 700, $fs: 60, $lh: 80);
+    @include desktop {
+      @include font($fw: 700, $fs: 60, $lh: 80);
     }
-}
-&__after-title{
-    @include font ($fw: 700, $fs: 30, $lh: 39);
+  }
+
+  html.light &__pre-title-span {
+    color: var(--light-accent-color);
+  }
+
+  html.dark &__pre-title-span {
+    color: var(--dark-accent-color);
+  }
+
+  &__after-title {
+    @include font($fw: 700, $fs: 30, $lh: 39);
     color: var(--white-text-color);
     text-shadow: var(--text-shadow);
-    @include tablet { 
-        @include font ($fw: 700, $fs: 30, $lh: 39);
-        letter-spacing: 0.085em;
+    @include tablet {
+      @include font($fw: 700, $fs: 30, $lh: 39);
+      letter-spacing: 0.085em;
     }
-}
-&__advantages-list {
+  }
+  &__advantages-list {
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin-top: 20px;
-    @include tablet { 
-        margin-top: 50px;
+    @include tablet {
+      margin-top: 50px;
     }
-}
-&__advantages-item {
+  }
+  &__advantages-item {
     display: flex;
     align-items: baseline;
     gap: 7px;
-    &:hover .hero__advantages-icon{ 
-        fill: var(--light-accent-hover-color);
+    @include tablet {
+      gap: 15px;
     }
-    @include tablet { 
-        gap: 15px;
+  }
+
+  html.light &__advantages-item {
+    fill: var(--light-accent-color);
+    &:hover .hero__advantages-icon {
+      fill: var(--light-accent-hover-color);
     }
-}
-&__advantages-text { 
-    @include font ($fw: 500, $fs: 14, $lh: 21);
+  }
+
+  html.dark &__advantages-item {
+    fill: var(--dark-accent-color);
+    &:hover .hero__advantages-icon {
+      fill: var(--dark-accent-hover-color);
+    }
+  }
+
+  &__advantages-text {
+    @include font($fw: 500, $fs: 14, $lh: 21);
     color: var(--white-text-color);
     text-shadow: var(--text-shadow);
-    @include tablet { 
-        @include font ($fw: 500, $fs: 24, $lh: 36);
+    @include tablet {
+      @include font($fw: 500, $fs: 24, $lh: 36);
     }
-}
-&__advantages-icon { 
-    fill: var(--light-accent-color);
+  }
+  &__advantages-icon {
     transition: fill var(--duration) var(--cubic);
-}
+  }
+
+  html.light &__advantages-icon {
+    fill: var(--light-accent-color);
+  }
+
+  html.dark &__advantages-icon {
+    fill: var(--dark-accent-color);
+  }
 }
 
 .hero__button-wrapper {
-    margin-top: 42px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    @include tablet { 
-        flex-direction: row;
-        margin-top: 70px;
-        gap: 27px;
-    }
-    @include desktop { 
-        gap: 35px;
-    }
+  margin-top: 42px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  @include tablet {
+    flex-direction: row;
+    margin-top: 70px;
+    gap: 27px;
+  }
+  @include desktop {
+    gap: 35px;
+  }
 }
 .hero__button {
-    width: 280px;
+  width: 280px;
 }
 .button {
 }
 .hero__address-wrapper {
-    display: flex;
-    justify-content: end;
-    margin-top: 150px;
+  display: flex;
+  justify-content: end;
+  margin-top: 150px;
 }
 .hero__works-hour {
-    @include font ($fw: 500, $fs: 14, $lh: 30);
-    color: var(--white-text-color);
+  @include font($fw: 500, $fs: 14, $lh: 30);
+  color: var(--white-text-color);
 }
 .hero__address {
 }
 .hero__address-list {
-    display: none;
-    @include desktop { 
-        display: flex;
-        gap: 22px;
-    }
+  display: none;
+  @include desktop {
+    display: flex;
+    gap: 22px;
+  }
 }
 .hero__address-item {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    &:hover > .hero__address-icon,
-    &:focus > .hero__address-icon { 
-        fill: var(--light-accent-hover-color);
-    }
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  html.light &:hover > .hero__address-icon,
+  html.light &:focus > .hero__address-icon {
+    fill: var(--light-accent-hover-color);
+  }
+  html.dark &:hover > .hero__address-icon,
+  html.dark &:focus > .hero__address-icon {
+    fill: var(--dark-accent-hover-color);
+  }
 }
 .hero__address-link {
-    @include font ($fw: 500, $fs: 14, $lh: 30);
-    color: var(--white-text-color);
-    cursor: pointer;
+  @include font($fw: 500, $fs: 14, $lh: 30);
+  color: var(--white-text-color);
+  cursor: pointer;
+}
+.hero__address-icon {
+  transition: fill var(--duration) var(--cubic);
+}
 
+html.light .hero__address-icon {
+  fill: var(--light-accent-color);
 }
-.hero__address-icon { 
-    fill: var(--light-accent-color);
-    transition: fill var(--duration) var(--cubic);
+
+html.dark .hero__address-icon {
+  fill: var(--dark-accent-color);
 }
+
 .hero__soc {
-    @include flex; 
-    animation-delay: 0.9s;
+  @include flex;
+  animation-delay: 0.9s;
 }
+
 .hero__soc::after,
-.hero__soc::before  { 
-    content: " ";
-    display: block;
-    width: 50%;
-    height: 2px;
-    background-color: var(--light-accent-color);
+.hero__soc::before {
+  content: ' ';
+  display: block;
+  width: 50%;
+  height: 2px;
 }
+
+html.dark .hero__soc::after,
+html.dark .hero__soc::before {
+  content: ' ';
+  background-color: var(--dark-accent-color);
+}
+
+html.light .hero__soc::after,
+html.light .hero__soc::before {
+  content: ' ';
+  background-color: var(--light-accent-color);
+}
+
 .hero__soc-list {
-    padding-left: 20px;
-    padding-right: 20px;
-    display: flex;
-    gap: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 .hero__soc-item {
 }
 .hero__soc-link {
-    &:hover > .hero__soc-icon,
-    &:focus > .hero__soc-icon { 
-        fill: var(--light-accent-hover-color);
-    }
+}
+
+html.light .hero__soc-link {
+  &:hover > .hero__soc-icon,
+  &:focus > .hero__soc-icon {
+    fill: var(--light-accent-hover-color);
+  }
+}
+
+html.dark .hero__soc-link {
+  &:hover > .hero__soc-icon,
+  &:focus > .hero__soc-icon {
+    fill: var(--dark-accent-hover-color);
+  }
 }
 
 .hero__soc-icon {
-    fill: var(--light-accent-color);
+}
+
+html.light .hero__soc-icon {
+  fill: var(--light-accent-color);
+}
+
+html.dark .hero__soc-icon {
+  fill: var(--dark-accent-color);
 }

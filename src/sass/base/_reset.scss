@@ -11,23 +11,20 @@ ul {
   margin: 0;
   padding-left: 0;
 }
-body {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
-}
+
 img {
   display: block;
   width: 100%;
   max-width: 100%;
   height: auto;
 }
-address { 
+address {
   font-style: normal;
 }
 
 .list {
-    list-style: none;
-  }
-  .link {
-    text-decoration: none;
-  }
+  list-style: none;
+}
+.link {
+  text-decoration: none;
+}

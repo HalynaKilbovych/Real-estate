@@ -18,6 +18,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
   }
   &__nav-list {
     display: none;
@@ -53,8 +54,8 @@
   display: none;
   @include desktop {
     position: absolute;
-    top: 20px;
-    right: 0;
+    top: -10px;
+    right: 10px;
     display: flex;
     gap: 10px;
   }
@@ -63,7 +64,44 @@
   @include font($fw: 300, $fs: 14, $lh: 21);
   color: var(--white-text-color);
 }
+
+html.light .theme-switch__color--light {
+  font-weight: 700;
+  color: var(--light-accent-color);
+}
+
+html.dark .theme-switch__color--dark {
+  font-weight: 700;
+  color: var(--dark-accent-color);
+}
+
 .theme-switch__btn {
+  width: 36px;
+  height: 14px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+html.light .theme-switch__btn {
+  background-image: url(../images/themel.svg);
+}
+
+html.dark .theme-switch__btn {
+  background-image: url(../images/themeD.svg);
+}
+
+.theme-switch__auto {
+  display: none;
+  position: absolute;
+  top: 0px;
+  right: 140px;
+  background: transparent;
+  border: none;
+  color: var(--white-text-color);
+}
+
+.active {
+  display: block;
 }
 
 .mob-menu {
@@ -95,18 +133,29 @@
     display: block;
     width: 18px;
     height: 12px;
-    fill: var(--light-accent-color);
     transition: fill var(--duration) var(--cubic);
-    &:hover,
-    &:focus {
-      fill: var(--light-accent-hover-color);
-    }
     @include tablet {
       width: 24px;
       height: 20px;
     }
     @include desktop {
       display: none;
+    }
+  }
+
+  html.light &__button-icon {
+    fill: var(--light-accent-color);
+    &:hover,
+    &:focus {
+      fill: var(--light-accent-hover-color);
+    }
+  }
+
+  html.dark &__button-icon {
+    fill: var(--dark-accent-color);
+    &:hover,
+    &:focus {
+      fill: var(--dark-accent-hover-color);
     }
   }
 
@@ -133,13 +182,25 @@
     }
   }
   &__nav-icon {
-    fill: var(--light-accent-color);
     transition: fill var(--duration) var(--cubic);
+  }
+
+  html.light &__nav-icon {
+    fill: var(--light-accent-color);
     &:hover,
     &:focus {
       fill: var(--light-accent-hover-color);
     }
   }
+
+  html.dark &__nav-icon {
+    fill: var(--dark-accent-color);
+    &:hover,
+    &:focus {
+      fill: var(--dark-accent-hover-color);
+    }
+  }
+
   &__nav-link {
     @include font($fw: 500, $fs: 16, $lh: 24);
     color: var(--white-text-color);
