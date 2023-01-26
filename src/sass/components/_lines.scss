@@ -1,0 +1,35 @@
+.under-lines { 
+    display: flex;
+    column-gap: 30%;
+    row-gap: 10px;
+    flex-wrap: wrap;
+    @include tablet { 
+        row-gap: 20px;
+        column-gap: 3%;
+    }
+    @include desktop { 
+        row-gap:  30px;
+    }
+    // &--reverse { 
+        // flex-direction: column-reverse;
+        // gap: 20px;
+        // align-items: flex-end;
+    // }
+    &__item { 
+        width: 45%;
+        height: 2px;
+        background-color: var(--light-accent-color);
+    }
+    &__item:nth-child(even) { 
+        display: none; 
+        @include tablet { 
+            display: block;
+        }
+    }
+    &__item:first-child { 
+        margin-left: 7%;
+    }
+    &__item:last-child { 
+        margin-right: 7%;
+    }
+} 
