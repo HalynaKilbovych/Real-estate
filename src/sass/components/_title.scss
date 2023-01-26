@@ -111,6 +111,9 @@
         }
         &--advantage { 
             margin-right: auto;
+            @include tablet { 
+                margin-left: auto;
+            }
         }
     }
 }
