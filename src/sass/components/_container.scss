@@ -11,8 +11,13 @@
   
     @include tablet {
         width: 768px;
-        padding-left: 39px;
-        padding-right: 39px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    @include laptop { 
+        width: 1260px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
   
     @include desktop {

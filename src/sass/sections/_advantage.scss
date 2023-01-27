@@ -10,26 +10,29 @@
     @include flex;
     flex-direction: column;
     justify-content: space-between;
-    @include desktop {
+    @include laptop {
       flex-direction: row;
     }
   }
   &__text-content {
     max-width: 650px;
+    @include laptop { 
+      max-width: 45%;
+    }
   }
   &__section-title {
-    @include desktop {
+    @include laptop {
       text-align: left;
     }
   }
   &__section-title-wr { 
-    @include desktop { 
+    @include laptop { 
       display: none;
     }
   }
   &__section-title-wr--desktop {
     display: none; 
-    @include desktop { 
+    @include laptop { 
       display: block;
     }
   }
@@ -41,7 +44,7 @@
       flex-direction: row;
       flex-wrap: wrap;
     }
-    @include desktop {
+    @include laptop {
       flex-wrap: nowrap;
       flex-direction: column;
     }
@@ -52,7 +55,7 @@
     @include tablet {
       width: 250px;
     }
-    @include desktop {
+    @include laptop {
       width: auto;
     }
     &::before {
@@ -69,17 +72,15 @@
   }
   &__title {
     @include font($fw: 700, $fs: 17, $lh: 21);
-    // color: var(--dark-text-color);
     margin-bottom: 7px;
-    @include desktop {
+    @include laptop {
       @include font($fw: 700, $fs: 24, $lh: 16);
       margin-bottom: 15px;
     }
   }
   &__text {
     @include font($fw: 500, $fs: 14, $lh: 20);
-    // color: var(--dark-text-color);
-    @include desktop {
+    @include laptop {
       @include font($fw: 500, $fs: 16, $lh: 22);
     }
   }

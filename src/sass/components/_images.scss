@@ -1,166 +1,125 @@
-.img-wr--about {
-  position: relative;
-  width: 226px;
-  height: 151px;
-  @include tablet {
-    width: 331px;
-    height: 220px;
-  }
-  @include desktop {
-    width: 792px;
-    height: 528px;
-  }
+.img-wr--about { 
+    position: relative;
+    width: 226px;
+    height: 151px;
+    @include tablet { 
+        width: 331px;
+        height: 220px;
+    }
+    @include laptop {
+        width: 595px;
+        height: 397px;
+    }
+    @include desktop { 
+        width: 792px; 
+        height: 528px;
+    }
 
-  &::after {
-    content: '';
-    width: 100%;
-    height: 100%;
-    display: block;
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    z-index: -1;
-  }
-  &::before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    display: block;
-    position: absolute;
-    bottom: 5%;
-    right: 5%;
-    z-index: -1;
-    background-color: transparent;
-  }
-
-  html.light &::before {
-    content: '';
-    border: 2px solid var(--light-accent-color);
-  }
-
-  html.light &::after {
-    content: '';
-    background-color: var(--light-accent-color);
-  }
-
-  html.dark &::before {
-    content: '';
-    border: 2px solid var(--dark-accent-color);
-  }
-
-  html.dark &::after {
-    content: '';
-    background-color: var(--dark-accent-color);
-  }
+    &::after { 
+        content: "";
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        z-index: -1;
+        background-color: var(--light-accent-color); 
+    }
+    &::before{ 
+        content: "";
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        bottom: 5%;
+        right: 5%;
+        z-index: -1;
+        background-color: transparent;
+        border: 2px solid var(--light-accent-color);
+    }
 }
 
-.img-wr--advantage {
-  position: relative;
-  width: 226px;
-  height: 167px;
-  @include tablet {
-    width: 393px;
-    height: 269px;
-  }
-  @include desktop {
-    width: 797px;
-    height: 596px;
-  }
+.img-wr--advantage { 
+    position: relative;
+    width: 226px;
+    height: 167px;
+    @include tablet { 
+        width: 393px;
+        height: 269px;
+    }
+    @include laptop {
+        width: 595px;
+        height: 397px;
+    }
+    @include desktop { 
+        width: 797px; 
+        height: 596px;
+    }
 
-  &::after {
-    content: '';
-    width: 100%;
-    height: 100%;
-    display: block;
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    z-index: -1;
-  }
-  &::before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    display: block;
-    position: absolute;
-    bottom: 5%;
-    right: 5%;
-    z-index: -1;
-    background-color: transparent;
-  }
-
-  html.light &::after {
-    content: '';
-    border: 2px solid var(--light-accent-color);
-  }
-
-  html.light &::before {
-    content: '';
-    background-color: var(--light-accent-color);
-  }
-
-  html.dark &::after {
-    content: '';
-    border: 2px solid var(--dark-accent-color);
-  }
-
-  html.dark &::before {
-    content: '';
-    background-color: var(--dark-accent-color);
-  }
+    &::after { 
+        content: "";
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        bottom: 5%;
+        right: 5%;
+        z-index: -1;
+        background-color: var(--light-accent-color); 
+    }
+    &::before{ 
+        content: "";
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        z-index: -1;
+        background-color: transparent;
+        border: 2px solid var(--light-accent-color);
+    }
 }
 
-.img-wr--location {
-  position: relative;
-  width: 226px;
-  height: 167px;
-  @include tablet {
-    width: 393px;
-    height: 269px;
-  }
-  @include desktop {
-    width: 797px;
-    height: 596px;
-  }
+.img-wr--location { 
+    position: relative;
+    width: 226px;
+    height: 167px;
+    @include tablet { 
+        width: 393px;
+        height: 269px;
+    }
+    @include laptop {
+        width: 595px;
+        height: 397px;
+    }
+    @include desktop { 
+        width: 797px; 
+        height: 596px;
+    }
 
-  &::after {
-    content: '';
-    width: 100%;
-    height: 100%;
-    display: block;
-    position: absolute;
-    top: 5%;
-    left: 5%;
-    z-index: -1;
-  }
-  &::before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    display: block;
-    position: absolute;
-    bottom: 5%;
-    right: 5%;
-    z-index: -1;
-    background-color: transparent;
-  }
-  html.light &::before {
-    content: '';
-    border: 2px solid var(--light-accent-color);
-  }
-
-  html.light &::after {
-    content: '';
-    background-color: var(--light-accent-color);
-  }
-
-  html.dark &::before {
-    content: '';
-    border: 2px solid var(--dark-accent-color);
-  }
-
-  html.dark &::after {
-    content: '';
-    background-color: var(--dark-accent-color);
-  }
+    &::after { 
+        content: "";
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        z-index: -1;
+        background-color: var(--light-accent-color); 
+    }
+    &::before{ 
+        content: "";
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: absolute;
+        bottom: 5%;
+        right: 5%;
+        z-index: -1;
+        background-color: transparent;
+        border: 2px solid var(--light-accent-color);
+    }
 }

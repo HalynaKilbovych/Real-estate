@@ -21,7 +21,7 @@
     &__text-content { 
         max-width: 100%;
         @include tablet { 
-            max-width: 47%;
+            max-width: 46%;
         }
         @include desktop { 
             max-width: 40%;
@@ -33,7 +33,7 @@
     }
     &__text { 
         @include font ($fw: 500, $fs: 14, $lh: 21);
-        @include desktop { 
+        @include laptop { 
             @include font ($fw: 500, $fs: 18, $lh: 32);
         }
     }
