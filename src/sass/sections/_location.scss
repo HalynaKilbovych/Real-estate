@@ -59,8 +59,7 @@
     gap: 15px;
     align-items: baseline;
 }
-.location__advantage-icon {
-}
+
 .location__advantage-text {
     @include font($fw: 500, $fs: 14, $lh: 19); 
     @include tablet { 
@@ -79,8 +78,6 @@
     @include laptop { 
         font-size: 20px;   
     }
-}
-.img-wr--location {
 }
 .advantage__img {
 }
