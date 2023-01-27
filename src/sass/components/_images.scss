@@ -1,125 +1,106 @@
-.img-wr--about { 
-    position: relative;
-    width: 226px;
-    height: 151px;
-    @include tablet { 
-        width: 331px;
-        height: 220px;
-    }
-    @include laptop {
-        width: 595px;
-        height: 397px;
-    }
-    @include desktop { 
-        width: 792px; 
-        height: 528px;
-    }
-
-    &::after { 
-        content: "";
-        width: 100%;
-        height: 100%;
-        display: block;
-        position: absolute;
-        top: 5%;
-        left: 5%;
-        z-index: -1;
-        background-color: var(--light-accent-color); 
-    }
-    &::before{ 
-        content: "";
-        width: 100%;
-        height: 100%;
-        display: block;
-        position: absolute;
-        bottom: 5%;
-        right: 5%;
-        z-index: -1;
-        background-color: transparent;
-        border: 2px solid var(--light-accent-color);
-    }
+.img-wr--about {
+  position: relative;
+  width: 226px;
+  height: 151px;
+  @include tablet {
+    width: 331px;
+    height: 220px;
+  }
+  @include laptop {
+    width: 595px;
+    height: 397px;
+  }
+  @include desktop {
+    width: 792px;
+    height: 528px;
+  }
 }
 
-.img-wr--advantage { 
-    position: relative;
-    width: 226px;
-    height: 167px;
-    @include tablet { 
-        width: 393px;
-        height: 269px;
-    }
-    @include laptop {
-        width: 595px;
-        height: 397px;
-    }
-    @include desktop { 
-        width: 797px; 
-        height: 596px;
-    }
-
-    &::after { 
-        content: "";
-        width: 100%;
-        height: 100%;
-        display: block;
-        position: absolute;
-        bottom: 5%;
-        right: 5%;
-        z-index: -1;
-        background-color: var(--light-accent-color); 
-    }
-    &::before{ 
-        content: "";
-        width: 100%;
-        height: 100%;
-        display: block;
-        position: absolute;
-        top: 5%;
-        left: 5%;
-        z-index: -1;
-        background-color: transparent;
-        border: 2px solid var(--light-accent-color);
-    }
+.img-wr--advantage {
+  position: relative;
+  width: 226px;
+  height: 167px;
+  @include tablet {
+    width: 393px;
+    height: 269px;
+  }
+  @include laptop {
+    width: 595px;
+    height: 397px;
+  }
+  @include desktop {
+    width: 797px;
+    height: 596px;
+  }
 }
 
-.img-wr--location { 
-    position: relative;
-    width: 226px;
-    height: 167px;
-    @include tablet { 
-        width: 321px;
-        height: 220px;
-    }
-    @include laptop {
-        width: 595px;
-        height: 397px;
-    }
-    @include desktop { 
-        width: 806px; 
-        height: 565px;
-    }
+.img-wr--location {
+  position: relative;
+  width: 226px;
+  height: 167px;
+  @include tablet {
+    width: 321px;
+    height: 220px;
+  }
+  @include laptop {
+    width: 595px;
+    height: 397px;
+  }
+  @include desktop {
+    width: 806px;
+    height: 565px;
+  }
+}
 
-    &::after { 
-        content: "";
-        width: 100%;
-        height: 100%;
-        display: block;
-        position: absolute;
-        bottom: 5%;
-        left: 5%;
-        z-index: -1;
-        background-color: var(--light-accent-color); 
-    }
-    &::before{ 
-        content: "";
-        width: 100%;
-        height: 100%;
-        display: block;
-        position: absolute;
-        top: 5%;
-        right: 5%;
-        z-index: -1;
-        background-color: transparent;
-        border: 2px solid var(--light-accent-color);
-    }
+.img-wr--about::after,
+.img-wr--advantage::after,
+.img-wr--location::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  z-index: -1;
+}
+
+.img-wr--about::before,
+.img-wr--advantage::before,
+.img-wr--location::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  z-index: -1;
+  background-color: transparent;
+}
+
+html.light .img-wr--about::after,
+html.light .img-wr--advantage::after,
+html.light .img-wr--location::after {
+  content: '';
+  background-color: var(--light-accent-color);
+}
+html.light .img-wr--about::before,
+html.light .img-wr--advantage::before,
+html.light .img-wr--location::before {
+  content: '';
+  border: 2px solid var(--light-accent-color);
+}
+
+html.dark .img-wr--about::after,
+html.dark .img-wr--advantage::after,
+html.dark .img-wr--location::after {
+  content: '';
+  background-color: var(--dark-accent-color);
+}
+html.dark .img-wr--about::before,
+html.dark .img-wr--advantage::before,
+html.dark .img-wr--location::before {
+  content: '';
+  border: 2px solid var(--dark-accent-color);
 }

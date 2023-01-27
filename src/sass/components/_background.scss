@@ -1,0 +1,15 @@
+html.light body {
+  background-color: var(--lightBGL);
+  color: var(--dark-text-color);
+}
+
+html.dark body {
+  background-color: var(--darkBG);
+  color: var(--white-text-color);
+}
+
+html.dark .wrapperBGT {
+  background: url(../images/BGT-desktop.png);
+  background-position: center;
+  background-size: cover;
+}

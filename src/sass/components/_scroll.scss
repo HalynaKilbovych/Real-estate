@@ -1,0 +1,80 @@
+.up-btn__wrapper {
+  position: fixed;
+  bottom: 40px;
+  right: 15px;
+  z-index: 999;
+  cursor: pointer;
+  transition: var(--duration);
+
+  html.light & {
+    color: var(--light-accent-color);
+    box-shadow: inset 0 0 0 4px var(--dark-text-color);
+  }
+
+  html.dark & {
+    color: var(--dark-accent-color);
+    box-shadow: inset 0 0 0 4px var(--white-text-color);
+  }
+
+  @include mobile {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+  }
+  @include tablet {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+  }
+  @include laptop {
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+  }
+
+  &::before {
+    position: absolute;
+    bottom: 7%;
+    left: 0;
+    @include flex;
+    width: 100%;
+    height: 100%;
+    font-size: 40px;
+    content: '▲';
+
+    @include mobile {
+      font-size: 28px;
+    }
+    @include tablet {
+      font-size: 35px;
+    }
+    @include laptop {
+      font-size: 40px;
+    }
+  }
+
+  html.light &:hover,
+  html.light &:focus {
+    color: var(--light-accent-hover-color);
+  }
+
+  html.dark &:hover,
+  html.dark &:focus {
+    color: var(--dark-accent-hover-color);
+  }
+}
+
+.up-btn__svg-path {
+  box-sizing: border-box;
+  stroke: var(--light-accent-color);
+  stroke-width: 4px;
+  transition: var(--duration);
+  fill: none;
+
+  html.light & {
+    stroke: var(--light-accent-color);
+  }
+  html.dark & {
+    stroke: var(--dark-accent-color);
+  }
+}

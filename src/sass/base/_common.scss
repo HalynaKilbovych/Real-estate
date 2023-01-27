@@ -7,13 +7,3 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: 15px;
 }
-
-html.light body {
-  background-color: var(--lightBGL);
-  color: var(--dark-text-color);
-}
-
-html.dark body {
-  background-color: var(--darkBG);
-  color: var(--white-text-color);
-}

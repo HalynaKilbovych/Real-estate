@@ -40,10 +40,17 @@
     @include font($fw: 500, $fs: 16, $lh: 20);
     color: var(--white-text-color);
     transition: color var(--duration) var(--cubic);
-    &:hover,
-    &:focus {
+
+    html.light &:hover,
+    html.light &:focus {
       color: var(--light-accent-color);
     }
+
+    html.dark &:hover,
+    html.dark &:focus {
+      color: var(--dark-accent-color);
+    }
+
     @include desktop {
       @include font($fw: 500, $fs: 20, $lh: 30);
     }
