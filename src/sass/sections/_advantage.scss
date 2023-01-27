@@ -8,10 +8,10 @@
 
   &__content {
     @include flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     justify-content: space-between;
     @include desktop {
-      flex-direction: row-reverse;
+      flex-direction: row;
     }
   }
   &__text-content {
@@ -20,6 +20,17 @@
   &__section-title {
     @include desktop {
       text-align: left;
+    }
+  }
+  &__section-title-wr { 
+    @include desktop { 
+      display: none;
+    }
+  }
+  &__section-title-wr--desktop {
+    display: none; 
+    @include desktop { 
+      display: block;
     }
   }
   &__list {
@@ -74,5 +85,8 @@
   }
   &__img {
     margin-bottom: 40px;
+    @include tablet { 
+      margin-bottom: 75px;
+    }
   }
 }
