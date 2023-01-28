@@ -1,0 +1,142 @@
+.apartments {
+    padding-top: 45px;
+    padding-bottom: 55px;
+    @include tablet {
+      padding-top: 130px;
+      padding-bottom: 130px;
+    }
+}
+.apartments__title {
+    @include font($fw: 700, $fs: 17, $lh: 21);
+    text-transform: uppercase;
+    text-align: center;
+    @include tablet { 
+        @include font($fw: 700, $fs: 30, $lh: 40);   
+    }
+    @include laptop { 
+        @include font($fw: 700, $fs: 36, $lh: 40); 
+    }
+
+}
+.apartments__after-title {
+    @include font($fw: 500, $fs: 14, $lh: 21);
+    text-transform: capitalize;
+    text-align: center;
+    letter-spacing: 0.035em;
+    @include tablet { 
+        @include font($fw: 500, $fs: 16, $lh: 25);   
+    }
+}
+.apartments__number-list {
+    margin-top: 30px;
+    @include flex;
+    gap: 30px; 
+    @include tablet { 
+        gap: 50px; 
+    }
+}
+
+.apartments__number-item {
+}
+.apartments__number-text {
+    padding: 5px;
+    cursor: pointer;
+    @include font($fw: 500, $fs: 14, $lh: 30);
+    color: rgba(0, 0, 0, 0.7);
+    @include tablet { 
+        @include font($fw: 500, $fs: 20, $lh: 30);  
+    }
+
+}
+.apartments__number-text--active { 
+    color: var(--light-accent-color);
+    border-bottom: 1px solid var(--light-accent-color);
+}
+.apartments__list {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    @include tablet { 
+        gap: 30px;
+        margin-top: 45px;
+    }
+    @include laptop { 
+        gap: 50px;  
+        margin-top: 50px;
+    }
+}
+.apartments__item {
+    @include flex; 
+    flex-direction: column;
+    width: calc((100% / 3 ) - 30px); 
+    background: rgba(0, 90, 141, 0.2);
+    padding: 20px 8px 9px;
+    @include tablet { 
+        padding: 33px 25px;  
+        @include font($fw: 500, $fs: 14, $lh: 17); 
+    }
+    @include laptop { 
+        padding: 47px 48px 60px;   
+        @include font($fw: 500, $fs: 14, $lh: 17);  
+    }
+}
+.apartments__img-wr { 
+    width: 88px;
+    margin-bottom: 13px;
+    @include tablet { 
+        width: 180px;
+    }
+    @include laptop { 
+        width: 314px;
+    }
+}
+
+.apartments__meter {    
+    @include font($fw: 500, $fs: 14, $lh: 17); 
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 0.035em;
+    @include tablet { 
+        font-size: 18px;
+    }
+    @include laptop { 
+        font-size: 24px;
+    }
+}
+.apartments__text {
+    @include font($fw: 500, $fs: 14, $lh: 17); 
+    text-align: center;
+    text-transform: capitalize;
+    @include laptop {  
+        @include font($fw: 500, $fs: 18, $lh: 30);  
+    }
+}
+.apartments__icon {
+    fill: var(--light-accent-color);
+    margin-bottom: 10px;
+    @include tablet { 
+        width: 75px;
+        height: 75px;
+        margin-bottom: 15px;
+    }
+    @include laptop { 
+        width: 130px;
+        height: 130px;
+    }
+}
+.apartments__btn { 
+    width: 270px;
+    height: 55px;
+    display: block;
+    margin-top: 34px;
+    margin-left: auto;
+    margin-right: auto;
+    @include tablet { 
+        margin-top: 45px;
+    }
+    @include laptop {  
+        margin-top: 50px;
+    }
+}

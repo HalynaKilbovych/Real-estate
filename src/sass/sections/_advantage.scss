@@ -1,11 +1,4 @@
 .advantage {
-  padding-top: 45px;
-  padding-bottom: 55px;
-  @include tablet {
-    padding-top: 130px;
-    padding-bottom: 130px;
-  }
-
   &__content {
     @include flex;
     flex-direction: column;
