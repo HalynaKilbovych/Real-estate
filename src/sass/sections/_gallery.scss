@@ -1,0 +1,31 @@
+div.swiper {
+    width: 80%;
+    height: 600px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .swiper__item {
+    // width: 650px;
+    // padding: 35px;
+    // border-radius: 50px;
+    // margin-top: 10px;
+  }
+  div.swiper__item--second { 
+    width: 300px;
+    height: 200px;
+  }
+  div.swiper-button-prev::after,
+  div.swiper-button-next::after  {
+    font-size: 25px;
+  }
+  div.swiper-button-prev,
+  div.swiper-button-next {
+    // color: var(--accentBG);
+  }
+  .swiper-pagination {
+    bottom: 0;
+  }
+  span.swiper-pagination-bullet {
+    // background-color: var(--accentBG);
+  }
+  
