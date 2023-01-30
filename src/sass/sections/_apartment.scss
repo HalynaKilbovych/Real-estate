@@ -30,7 +30,7 @@
 .apartments__number-list {
     margin-top: 30px;
     @include flex;
-    gap: 30px; 
+    gap: 10px; 
     @include tablet { 
         gap: 50px; 
     }
@@ -41,7 +41,7 @@
 .apartments__number-text {
     padding: 5px;
     cursor: pointer;
-    @include font($fw: 500, $fs: 14, $lh: 30);
+    @include font($fw: 500, $fs: 11, $lh: 30);
     color: rgba(0, 0, 0, 0.7);
     @include tablet { 
         @include font($fw: 500, $fs: 20, $lh: 30);  
@@ -70,9 +70,12 @@
 .apartments__item {
     @include flex; 
     flex-direction: column;
-    width: calc((100% / 3 ) - 30px); 
+    width: calc((100% - 20px) / 3); 
     background: rgba(0, 90, 141, 0.2);
     padding: 20px 8px 9px;
+    @media screen and (min-width: 450px) {
+        padding: 25px 20px;
+      }
     @include tablet { 
         padding: 33px 25px;  
         @include font($fw: 500, $fs: 14, $lh: 17); 
@@ -83,7 +86,7 @@
     }
 }
 .apartments__img-wr { 
-    width: 88px;
+    width: 100%;
     margin-bottom: 13px;
     @include tablet { 
         width: 180px;
@@ -106,9 +109,12 @@
     }
 }
 .apartments__text {
-    @include font($fw: 500, $fs: 14, $lh: 17); 
+    @include font($fw: 500, $fs: 10, $lh: 17); 
     text-align: center;
     text-transform: capitalize;
+    @media screen and (min-width: 412px) {
+        @include font($fw: 500, $fs: 14, $lh: 17); 
+      }
     @include laptop {  
         @include font($fw: 500, $fs: 18, $lh: 30);  
     }
@@ -116,6 +122,8 @@
 .apartments__icon {
     fill: var(--light-accent-color);
     margin-bottom: 10px;
+    width: 25px;
+    height: 25px;
     @include tablet { 
         width: 75px;
         height: 75px;

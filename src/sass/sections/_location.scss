@@ -43,8 +43,11 @@ html.dark .location__after-title span {
 }
 
 .location__text-content {
-  max-width: 46%;
+  max-width: 100%;
   @include tablet {
+    max-width: 55%;
+  }
+  @include laptop { 
     max-width: 45%;
   }
 }
