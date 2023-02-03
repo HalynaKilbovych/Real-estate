@@ -1,0 +1,90 @@
+.footer {
+    background: var(--black-text-color);
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+.footer__container { 
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.footer__logo-wr {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    @include tablet { 
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 80px;
+    }
+}
+.footer__logo {
+    flex-direction: column;
+    gap: 3px;
+    @include laptop { 
+        align-items: center;
+    }
+}
+.footer__logo-span { 
+    font-size: 33px;
+    @include laptop { 
+        font-size: 48px;
+    }
+}
+.footer__years {
+    @include font($fw: 500, $fs: 14, $lh: 17); 
+    text-transform: capitalize;
+    color: var(--white-text-color);
+    @include tablet { 
+        font-size: 20px;
+    }
+
+}
+.footer__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    @include tablet { 
+        flex-direction: row;
+        align-items: center;
+    }
+    @include laptop { 
+        gap: 80px;
+    }
+}
+.footer__nav-item { 
+    @include font($fw: 500, $fs: 14, $lh: 17); 
+    color: var(--white-text-color);
+    transition: color var(--duration) var(--cubic);
+    &:hover, 
+    &:focus{ 
+        color: var(--light-accent-color);
+    }
+    @include tablet { 
+        font-size: 20px;
+    }
+    
+    
+}
+.footer__button {
+    display: flex;
+    align-items: center;
+    width: 270px;
+    height: 55px;
+    display: none;
+    @include laptop { 
+        display: block;
+        @include font($fw: 500, $fs: 20, $lh: 30); 
+    }
+    &:hover .footer__button-icon, 
+    &:focus .footer__button-icon{ 
+        transform: rotate(90deg);
+    }
+}
+
+.footer__button-icon { 
+    margin-left: 50px;
+    fill: currentColor;
+    transition: transform var(--duration) var(--cubic);
+}

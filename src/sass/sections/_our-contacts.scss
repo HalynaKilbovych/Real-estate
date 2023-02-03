@@ -148,8 +148,11 @@
         padding: 10px;
         @include tablet {
             padding: 20px; 
-            width: 582px;
+            width: 500px;
             height: 237px;
+        }
+        @include laptop { 
+            width: 528px;
         }
     }
     &__checkbox { 
