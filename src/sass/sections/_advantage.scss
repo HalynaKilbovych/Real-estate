@@ -14,16 +14,20 @@
     }
   }
   &__section-title {
+    text-align: center;
     @include laptop {
       text-align: left;
     }
   }
   &__section-title-wr { 
+    margin-bottom: 30px;
+    width: 100%;
     @include laptop { 
       display: none;
     }
   }
   &__section-title-wr--desktop {
+    margin-bottom: 30px;
     display: none; 
     @include laptop { 
       display: block;

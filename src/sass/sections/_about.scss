@@ -15,6 +15,7 @@
     }
     &__text-content { 
         max-width: 100%;
+        margin-top: 40px;
         @include tablet { 
             max-width: 46%;
         }
@@ -24,7 +25,9 @@
     }
     &__img { 
         margin-top: 40px;
-        margin-bottom: 40px;
+    }
+    &__section-title { 
+        
     }
     &__text { 
         @include font ($fw: 500, $fs: 14, $lh: 21);
@@ -34,6 +37,7 @@
     }
     &__text--first { 
         margin-bottom: 10px;
+        margin-top: 30px;
     }
 }
 

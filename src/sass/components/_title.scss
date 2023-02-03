@@ -120,7 +120,6 @@
   @include font($fw: 700, $fs: 17, $lh: 21);
   text-transform: uppercase;
   max-width: 560px;
-  text-align: center;
   @include tablet {
     @include font($fw: 700, $fs: 21, $lh: 38);
   }
@@ -131,24 +130,19 @@
   &__line {
     width: 190px;
     height: 2px;
-    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: 0;
     @include tablet {
       width: 270px;
+      margin-left: 90px;
     }
-    @include desktop {
+    @include laptop {
       width: 370px;
+      margin-left: auto; 
     }
-    &--about {
-      margin-left: 150;
-      @include tablet { 
-        margin-left: 90px;
-      }
-      @include laptop { 
-        margin-left: auto;
-      }
-    }
-    &--advantage {
+    &--reverse { 
       margin-right: auto;
+      margin-left: 0;
       @include tablet {
         margin-left: auto;
       }

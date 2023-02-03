@@ -9,6 +9,9 @@
     }
   }
 }
+.location__section-title { 
+  text-align: center;
+}
 .location__section-title-wr {
   @include tablet {
     display: none;
@@ -19,6 +22,12 @@
   @include tablet {
     display: block;
   }
+
+}
+
+.section-title__line--location { 
+  margin-bottom: 30px;
+  margin-left: 90px;
 }
 .location__after-title {
   margin-bottom: 40px;

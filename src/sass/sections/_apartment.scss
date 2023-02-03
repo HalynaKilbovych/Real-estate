@@ -19,6 +19,7 @@
 
 }
 .apartments__after-title {
+    margin-top: 30px;
     @include font($fw: 500, $fs: 14, $lh: 21);
     text-transform: capitalize;
     text-align: center;
