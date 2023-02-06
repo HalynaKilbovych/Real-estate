@@ -11,12 +11,17 @@ const swiper = new Swiper('.mySwiper', {
   loop: true,
   direction: 'horizontal',
   spaceBetween: 60,
+  speed: 10000,
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+  },
   coverflowEffect: {
     rotate: 50,
     stretch: 0,
     depth: 100,
     modifier: 1,
-    slideShadows: true,
+    slideShadows: false,
   },
   pagination: {
     el: '.swiper-pagination',
